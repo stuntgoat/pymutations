@@ -34,6 +34,7 @@ def insert_each(orphan_item, target_array):
         
     return array_of_arrays
 
+
 def append_lists(working_list, list_of_lists):
     # appends every list in list_of_lists to working_list; returns working_list
     for _list in list_of_lists:
@@ -43,9 +44,11 @@ def append_lists(working_list, list_of_lists):
 
 def permute(original_list, list_of_lists):
     """
-    accept a list of items to insert one at a time into new_list
+    accept a list of items, original_list, to insert one at a time into list_of_lists
     using the function insert_each. Called for the first time,
-    new_list is an empty list. Then call recursively.
+    new_list is a list containing an empty list. Then call recursively using
+    an updated list_of_lists, called new_list_of_lists below, and the remaining
+    items in original list.
     """
     try:
         last_item = original_list.pop()
